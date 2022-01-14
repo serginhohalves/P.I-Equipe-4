@@ -32,14 +32,14 @@ img{
 
 .container{
     margin: auto;
-    background: #D9534F;
+    background: #D3CE3D;
     padding: 10px;
     
 }
 
 .logo{
     display: flex;
-    background-color: #FFAD60;
+    background-color: #FFEEAD;
     border: solid 1px #fff;
     border-radius:10px;
     align-items: center;
@@ -57,6 +57,7 @@ img{
     width:700px;
     border: solid 1px #cecece;
     border-radius: 10px;
+    background-color: #FFEEAD;
     
 }
 

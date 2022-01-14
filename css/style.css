@@ -1,5 +1,5 @@
 /* Pre-Formatacao do Código*/
-@import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
     margin: 0;
@@ -7,7 +7,7 @@
 }
 body {
     margin: 0;
-    font-family:Voltaire;
+    font-family:Poppins;
 }
 
 p {
@@ -32,15 +32,15 @@ img{
 
 .container{
     margin: auto;
-    background: #D3CE3D;
+    background: #D9534F;
     padding: 10px;
     
 }
 
 .logo{
     display: flex;
-    background-color: #F1EFA5;
-    border: solid 1px #cecece;
+    background-color: #FFAD60;
+    border: solid 1px #fff;
     border-radius:10px;
     align-items: center;
     padding: 1px;
@@ -53,10 +53,11 @@ img{
 }
 
 .container input{
-    padding:auto;
+    padding: 10px;
     width:700px;
     border: solid 1px #cecece;
     border-radius: 10px;
+    
 }
 
 .p-header{
@@ -84,10 +85,12 @@ img{
 
 li{
     cursor: pointer;
+    
+    color: #000000;
 }
 
 /* Section - Navigation */
-
+#FFAD60
 
 .p1-section{
     position: absolute;
@@ -97,7 +100,7 @@ li{
     padding: 0px;
     height: 120vh;
     width: 100vw;
-    background:linear-gradient(72deg,#fff 1%,#f3f1be 99%)
+    background:linear-gradient(72deg,#fff 1%,#cecece 99%)
 
 }
 
@@ -118,13 +121,14 @@ li{
 /* Section */
 
 section{
-    background: #F1EFA5;
+    background: #fff;
 }
 .slider{
     height: 290px;
     width: 1015px;
     padding:10px;
     margin: auto;
+    padding-bottom: 100px;
 }
 
 .slider li{
@@ -140,63 +144,67 @@ section{
 }
 
 
+/* Section 2 -> Catálogo do Prodito */
 
-/* .p-section img{
-    border-radius: 20px;
-} */
-/* 
-.navigation{
-    position: absolute;
-    bottom: 200px;
-    left: -110px;
-    transform: translate(190%);
+
+.catalogo{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,3fr);
+    grid-gap: 30px;
+    justify-items: center;
+    
+    border: solid 1px black;
+
+}
+
+.catalogo div img{
+    width: 200px;
+    
+}
+.catalogo div p{
+    text-align: center;
+}
+
+
+.catalogo div{
+    
+    border: solid 1px #D3CE3D;
+    text-align: center;
+}
+
+
+/*  Footer*/
+
+.social{
+    background: #D3CE3D;
     display: flex;
-    
-
+    justify-content: space-around;
 }
 
-.navigation label{
-    width: 70px;
-    height: 17px;
-    border: 2px solid #cecece;
-    margin: 1px;
-    border-radius: 5px;
-    cursor: pointer;
-
+.social h4{
+    padding-bottom: 10px;
 }
 
-.navigation label:hover{
-    background-color: #D3CE3D;
-}
 
-.slides{
-    display: flex; 
-    width: 500%;
-    height: 0%;
+.social ul img{
+    width: 20px;
     
 }
-.slides input{
-    display: none;
+.social ul{
+    display: flex;
+    flex-direction: column;
+    line-height: 2.0;
+
 }
 
-.slide{
-    width: 20%;
-    transition: 0.4s;
-}
-.slide img{ 
-    width: 380%;
-    height: 100%; 
+.social ul li{
+    display: flex;
 }
 
-#slide1:checked ~ .s1{
-    margin-left:0;
+.departamento ul{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
 }
-
-#slide2:checked ~ .s1{
-    margin-left:-95%;
-} */
-
-
-
-
-

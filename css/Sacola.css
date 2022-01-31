@@ -1,152 +1,252 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin    : 0px;
+    padding   : 0px;
+    box-sizing: border-box;
+    
 }
-body{
-    margin: 0px;
-    font-family:Poppins;
+
+body {
+    margin     : 0px;
+    font-family: Poppins;
+    margin     : auto;
 }
-p.a{
+
+p.a {
     text-align: justify;
-    font-size: 14px;
+    font-size : 14px;
 }
-a{
+
+a {
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-img{
+img {
     cursor: pointer;
 }
 
-/* Header */
-
-.container{
-    margin: auto;
+.container {
+    margin    : auto;
+    width     : 100%;
     background: #D3CE3D;
-    padding: 10px;
-    border: solid 1px black;
+    padding   : 10px;
+    border    : solid 1px black;
 }
-.logo{
-    display: flex;
+
+.logo {
+    display         : flex;
     background-color: #FFEEAD;
-    border: solid 1px #fff;
-    border-radius: 10px;
-    align-items: center;
-    cursor: pointer;
-    padding: 1px;
+    border          : solid 1px #fff;
+    border-radius   : 10px;
+    align-items     : center;
+    cursor          : pointer;
+    padding         : 1px;
 }
-.logo img{
+
+.logo img {
     padding-right: 5px;
 }
-.p-header{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 100px;
+
+.container input {
+    padding         : 10px;
+    width           : 700px;
+    border          : solid 1px #cecece;
+    border-radius   : 10px;
+    background-color: #FFEEAD;
+    font-size       : 14px;
+    color           : #000;
+    margin          : 10px 0px;
+    cursor          : pointer;
+    height          : 40px;
+
+
 }
-.p-header img{
-    width: 20px;
+
+.p-header {
+    display        : flex;
+    justify-content: space-between;
+    margin-left    : 100px;
+}
+
+.p-header img {
+    width : 20px;
     cursor: pointer;
 }
-.s-header ul{
-    display: flex;
+
+.container ul {
+    display        : flex;
     justify-content: space-between;
-    margin: 10px 100px 0px 100px;
-    font-size: 13px;
-    
- }
-.s-header img{
-    width: 25px;
+    margin         : 10px 100px 0px 100px;
+    font-size      : 13px;
+
+}
+
+.container img {
+    width          : 25px;
     justify-content: space-between;
 }
-.s-header ul li{
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    cursor: pointer;
-    color: #777777;
+
+.nav ul li {
+
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+    /* padding     : 15px; */
+    cursor         : pointer;
+    font-weight    : 600;
+    color          : #000;
 }
-h3{
+
+.nav li:hover {
+    background-color: #FFEEAD;
+    border-radius   : 3px;
+    cursor          : pointer;
+}
+
+h3 {
     padding-top: 20px;
     margin-left: 50px;
 }
-p.b{
-    margin-left: 40px;
-    padding: 10px;
-    font-size: 15px;
+
+p.b {
+    margin-left    : 40px;
+    padding        : 10px;
+    font-size      : 15px;
     text-decoration: underline;
-    cursor: pointer;
-    color: #8C8C8C;
-}
-.container2{
-    margin-left: 50px;
-    padding: 20px;
-    width: 450px;
-    margin-top: 5px;
-    background-color: #EBEBEB;
-}
-p.c{
-    color: #CECACA;
-}
-p.d{
-    margin-left: 40px;
-    padding: 10px;
-    text-decoration: underline;
-    cursor: pointer;
-    margin-top: 15px;
-    color: #8C8C8C;
-}
-.container3{
-    margin-left: 50px;
-    padding: 20px;
-    width: 450px;
-    margin-top: 5px;
-    background-color: #EBEBEB;
-}
-p.e{
-    color: #CECACA;    
+    cursor         : pointer;
+    color          : #8C8C8C;
 }
 
-.footer{
-    display: flex;
-    margin: auto;
-    height: 160px;
+.container2 {
+    margin-left     : 50px;
+    padding         : 20px;
+    width           : 450px;
+    margin-top      : 5px;
+    background-color: #EBEBEB;
+}
+
+p.c {
+    color: #CECACA;
+}
+
+p.d {
+    margin-left    : 40px;
+    padding        : 10px;
+    text-decoration: underline;
+    cursor         : pointer;
+    margin-top     : 15px;
+    color          : #8C8C8C;
+}
+
+.container3 {
+    margin-left     : 50px;
+    padding         : 20px;
+    width           : 450px;
+    margin-top      : 5px;
+    background-color: #EBEBEB;
+}
+
+p.e {
+    color: #CECACA;
+}
+
+.footer {
+    display   : flex;
+    margin    : auto;
+    height    : 160px;
     background: #D3CE3D;
-   
+
     border: solid 1px black;
 }
-.p-footer img{
-    width: 25px;
+
+.p-footer img {
+    width          : 25px;
     justify-content: space-between;
 }
-.p-footer ul{
-    display: flex;
+
+.p-footer ul {
+    display        : flex;
     justify-content: space-between;
-    margin: center;
-   
+    margin         : center;
+
 }
-.p-footer ul li{
-    display: flex;
-    font-size: 12px;
-    margin-top: 15px;
-    cursor: pointer;
+
+.p-footer ul li {
+    display        : flex;
+    font-size      : 12px;
+    margin-top     : 15px;
+    cursor         : pointer;
     text-decoration: underline;
-    margin-left: 220px;
+    margin-left    : 220px;
 }
-p.f{
-    font-size: 10px;
-    line-height: 10px;
-    margin-left: 255px;
-    margin-top: 26px;
+
+p.f {
+    font-size      : 10px;
+    line-height    : 10px;
+    margin-left    : 255px;
+    margin-top     : 26px;
     text-align-last: center;
 }
-p.g{
-    font-size: 10px;
+
+p.g {
+    font-size  : 10px;
     margin-left: 450px;
-    margin-top: 35px;
+    margin-top : 35px;
 }
-   
+
+.f{
+    margin-left: 450px;
+    margin-top : 35px;
+    
+}
+
+/* Sacola/Endereco */
+.form-p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.form-p button{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
+    background-color: #D3CE3D;
+    border: solid 1px #cecece;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #000;
+}
+
+.form-s{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
+/* .form-s label{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: #000;
+} */
+.form-s input{
+    border: 1px solid #cecece;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px #cecece;
+    margin-bottom: 10px;
+
+}

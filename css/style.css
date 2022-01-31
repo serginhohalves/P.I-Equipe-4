@@ -1,19 +1,24 @@
 /* Pre-Formatacao do Código*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
 }
+
 body {
-    margin: 0;
-    font-family:Poppins;
+    margin     : auto;
+    font-family: Poppins;
+    max-width  : 1400px;
+
+
 }
 
 p {
-    line-height:1.6;
-    text-align: justify;
-    font-size: 14px;
+    line-height: 1.6;
+    text-align : justify;
+    font-size  : 14px;
 }
 
 a {
@@ -24,213 +29,236 @@ ul {
     list-style: none;
 }
 
-img{
+img {
     cursor: pointer;
 }
 
 /* Header */
 
-.container{
-    margin: auto;
+.container {
+    margin    : auto;
     background: #D3CE3D;
-    padding: 10px;
-    
+    padding   : 10px;
+
+
 }
 
-.logo{
-    display: flex;
+.logo {
+    display         : flex;
     background-color: #FFEEAD;
-    border: solid 1px #fff;
-    border-radius:10px;
-    align-items: center;
-    padding: 1px;
-    cursor: pointer;
+    border          : solid 1px #fff;
+    border-radius   : 10px;
+    align-items     : center;
+    /* padding      : 1px; */
+    cursor          : pointer;
+    height          : 40px;
 }
 
-.logo img{
+.logo img {
     padding-right: 5px;
 
+
 }
 
-.container input{
-    padding: 10px;
-    width:700px;
-    border: solid 1px #cecece;
-    border-radius: 10px;
+.container input {
+    padding         : 10px;
+    width           : 700px;
+    border          : solid 1px #cecece;
+    border-radius   : 10px;
     background-color: #FFEEAD;
-    
+    font-size       : 14px;
+    color           : #000;
+    margin          : 10px 0px;
+    cursor          : pointer;
+    height          : 40px;
+
+
 }
 
-.p-header{
-    display: flex;
-    justify-content:space-between;
+.p-header {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
 }
 
 .p-header img {
 
-    width: 20px;
+    width : 20px;
     cursor: pointer;
 
 }
 
-#carrinho{
+#carrinho {
     width: 30px;
 }
 
-.s-header ul{
-    display: flex;
-    justify-content:space-around;
-    margin: 10px 100px 0px 100px;
-    
+.s-header ul {
+    display        : flex;
+    justify-content: space-around;
+    margin         : 10px 100px 0px 100px;
+
 }
 
-li{
-    cursor: pointer;
-    
-    color: #000000;
+li:hover {
+    background-color: #FFEEAD;
+    border-radius   : 3px;
+    cursor          : pointer;
+    color           : #000000;
 }
 
 /* Section - Navigation */
-#FFAD60
-
-.p1-section{
-    position: absolute;
-    display: flex;
-    flex-direction:inherit;
-    margin: 0px;
-    padding: 0px;
-    height: 120vh;
-    width: 100vw;
-    background:linear-gradient(72deg,#fff 1%,#cecece 99%)
-
+#FFAD60 .p1-section {
+    position      : absolute;
+    display       : flex;
+    flex-direction: inherit;
+    margin        : 0px;
+    padding       : 0px;
+    height        : 120vh;
+    width         : 100vw;
+    background    : linear-gradient(72deg, #fff 1%, #cecece 99%)
 }
 
-.p-section{
-    height:600px;
-    width: 800px;
-    overflow: hidden;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50% );
+.p-section {
+    height       : 600px;
+    width        : 800px;
+    overflow     : hidden;
+    position     : absolute;
+    top          : 40%;
+    left         : 50%;
+    transform    : translate(-50%, -50%);
     border-radius: 10px;
-    
+
 
 }
 
 
 /* Section */
-
+/* 
 section{
     background: #fff;
-}
-.slider{
-    height: 290px;
-    width: 1015px;
-    padding:10px;
-    margin: auto;
+} */
+.slider {
+    height        : 290px;
+    width         : 1015px;
+    padding       : 10px;
+    margin        : auto;
     padding-bottom: 100px;
 }
 
-.slider li{
-    position: absolute; 
+.slider li {
+    position: absolute;
 }
 
-.slider img{
+.slider img {
     margin: auto;
-    height:100%;
-    width: 100%;
+    height: 100%;
+    width : 100%;
 
-    vertical-align:top;
+    vertical-align: top;
 }
 
 
-/* Section 2 -> Catálogo do Prodito */
+/* Section 2 -> Catálogo do Produto */
 
 
-.catalogo{
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(4,3fr);
-    grid-gap: 30px;
-    justify-items: center;
-    
-    border: solid 1px black;
+.catalogo {
+    /* padding: 20px; */
+    display              : grid;
+    grid-template-columns: repeat(4, 3fr);
+    grid-gap             : 30px;
+    justify-items        : center;
+    margin-top           : 20px;
+    margin-bottom        : 20px;
+    /* border            : solid 1px; */
 
 }
 
-.catalogo div img{
+.catalogo div img {
     width: 200px;
-    
+
 }
-.catalogo div p{
+
+.catalogo div p {
     text-align: center;
 }
 
 
-.catalogo div{
-    
-    border: solid 1px #D3CE3D;
+.catalogo div {
+
+    border    : solid 1px #D3CE3D;
     text-align: center;
 }
 
 
 /*  Footer*/
 
-.social{
-    background: #D3CE3D;
-    display: flex;
+.social {
+    background     : #D3CE3D;
+    display        : flex;
     justify-content: space-around;
 }
 
-.social h4{
+.social h4 {
     padding-bottom: 10px;
 }
 
 
-.social ul img{
+.social ul img {
     width: 20px;
-    
+
 }
-.social ul{
-    display: flex;
+
+.social ul {
+    display       : flex;
     flex-direction: column;
-    line-height: 2.0;
+    line-height   : 2.0;
 
 }
 
-.social ul li{
+.social ul li {
     display: flex;
 }
 
-.departamento ul{
-    display: flex;
-    flex-direction:row;
+.departamento ul {
+    display        : flex;
+    flex-direction : row;
     justify-content: space-between;
-    align-items: center;
+    align-items    : center;
 }
 
 .btn {
-    background-color: #0f6d06;
-    color: #fff;
-    border: 0;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-    padding: 14px 40px;
-    font-size: 16px;
-    cursor: pointer;
+    background-color: #b1df0a;
+    color           : #fff;
+    border          : 0;
+    border-radius   : 10px;
+    box-shadow      : 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding         : 14px 40px;
+    font-size       : 16px;
+    cursor          : pointer;
 }
 
 .btn-frete {
-    background-color: #b1df0a;
-    color: #fff;
-    border: 0;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-    padding: 14px 40px;
-    font-size: 16px;
-    cursor: pointer;
+    background-color: #0f6d06;
+    color           : #fff;
+    border          : 0;
+    border-radius   : 10px;
+    box-shadow      : 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding         : 14px 40px;
+    font-size       : 16px;
+    cursor          : pointer;
 }
+
+/* 
+.btn-frete button {
+    background-color: #b1df0a;
+    color           : #fff;
+    border          : 0;
+    border-radius   : 10px;
+    box-shadow      : 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding         : 14px 40px;
+    font-size       : 16px;
+    cursor          : pointer;
+} */
 
 .btn:active {
     transform: scale(0.98);
@@ -246,4 +274,47 @@ section{
 
 .btn-frete:focus {
     outline: 0;
+}
+
+
+/* Descrição do Produto */
+
+.descricao{
+    display:flex;
+    justify-content: space-around;
+    width: 90%;
+
+}
+
+.s-descricao{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.s-descricao p{
+    line-height: 2.0;
+}
+
+.price button{
+    display:flex;
+    background-color: #0f6d06;
+    color           : #fff;
+    border          : 0;
+    border-radius   : 10px;
+    box-shadow      : 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding         : 14px 40px;
+    font-size       : 16px;
+    cursor          : pointer;
+}
+.price span{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+
+}
+.price button:active {
+    transform: scale(0.98);
 }

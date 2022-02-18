@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "express": "^4.17.2"
-  }
+  },
+  "name": "p.i-equipe-4",
+  "description": "Esse é o repositório do Projeto Integrador da equipe 4 do curso de desenvolvimento web Full Stack da Digital House!",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelheitor/P.I-Equipe-4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelheitor/P.I-Equipe-4/issues"
+  },
+  "homepage": "https://github.com/rafaelheitor/P.I-Equipe-4#readme"
 }

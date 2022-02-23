@@ -3,48 +3,48 @@
         "nome": "Ração premium filhote",
         "preco": "R$ 150,00",
         "categoria": "Alimentação",
-        "imagem": "caminho"
+        "imagem": "/img/racao-premium-filhote.jpg"
     },
     {
         "nome": "Ração premium adulto",
         "preco": "R$ 180,00",
         "categoria": "Alimentação",
-        "imagem": "caminho"
+        "imagem": "/img/Produto-Cachorro.jpg"
     },
     {
         "nome": "Ração para gatos",
         "preco": "R$ 125,00",
         "categoria": "Alimentação",
-        "imagem": "caminho"
+        "imagem": "/img/racao-gato.jpg"
     },
     {
         "nome": "Carrapaticida",
         "preco": "R$ 67,00",
         "categoria": "Saúde",
-        "imagem": "caminho"
+        "imagem": "/img/carrapaticida.jpg"
     },
     {
         "nome": "Comedouro NF Pet Pesado em Alumínio",
         "preco": "R$ 15,00",
         "categoria": "Alimentação",
-        "imagem": "caminho"
+        "imagem": "/img/comedouro-aluminio.jpg"
     },
     {
         "nome": "Protetor Solar docg. Make Me Protected para Cães e Gatos",
         "preco": "R$ 89,00",
         "categoria": "Saúde",
-        "imagem": "caminho"
+        "imagem": "/img/protetor-solar.jpg"
     },
     {
         "nome": "Petisco Whiskas Temptations Antibola de Pelo para Gatos Adultos",
         "preco": "R$8,99",
         "categoria": "Alimentação",
-        "imagem": "caminho"
+        "imagem": "/img/petisco-whiskas.jpg"
     },
     {
         "nome": "Vermífugo Drontal Gatos 4 Kg - 4 Comprimidos",
         "preco": "R$37,71",
         "categoria": "Saúde",
-        "imagem": "caminho"
+        "imagem": "/img/vermifugo.jpg"
     }
 ]

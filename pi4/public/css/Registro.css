@@ -96,3 +96,7 @@ body {
     font-size: 16px;
     text-align: justify;
 }
+
+.controle-form button {
+    margin-top: 10px;
+}

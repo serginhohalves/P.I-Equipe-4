@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/css/Registro.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
+
 <body>
     <div class="container">
 
@@ -16,32 +18,27 @@
             <a href="/"><img src="../img/paw-solid.svg" alt="logo"></a>
             <h3>Registre-se para ter acesso</h3>
         </div>
-        <form>
-            <div class="controle-form">
-                <label for="name">Nome</label>
-                <input type="text">                
-            </div>
-            <div class="controle-form">
-                <label for="email">Email</label>
-                <input type="email">
-            </div>
-            <div class="controle-form">
-                <label for="password">Senha</label>
-                <input type="password">
-            </div>
-            <div class="controle-form">
-                <label for="password">Confirmar Senha</label>
-                <input type="password">
+        <form action="/users/registro" method="POST" class="controle-form">
 
-            </div>
-            <div>
-                <button class="btn">Criar</button>
-            <p class="texto"><a href="Login.html">Voltar</a></p>
-            </div>
-            
+            <label for="name">Nome</label>
+            <input type="text" name="name">
+
+            <label for="email">Email</label>
+            <input type="email" name="email">
+
+            <label for="password">Senha</label>
+            <input type="password" name="password">
+            <!--                 
+                <label for="password">Confirmar Senha</label>
+                <input type="password"> -->
+            <button type="submit" class="btn">Cadastrar</button>
+            <!-- <p class="texto"><a href="">Voltar</a></p> -->
+
+
         </form>
-       
+
 
     </div>
 </body>
+
 </html>

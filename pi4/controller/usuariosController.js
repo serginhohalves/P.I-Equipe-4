@@ -1,8 +1,6 @@
-const fs = require("fs"); //importa o modulo fs
-const path = require("path"); //para pegar o caminho do arquivo
+const { sequelize, Usuario } = require('../models')
 const bcrypt = require("bcrypt");
 
-let  modelCadastroUser = path.join(__dirname, "../model/cadastroUser.json");
 
 const usuariosController = {
     login: (req, res) => {
@@ -11,12 +9,14 @@ const usuariosController = {
     registro: (req, res) => {
         res.render('Registro')
     },
-    registroUser: (req, res) => {
-        let{name, email, password} = req.body;
-        let senhaCriptografada = bcrypt.hashSync(password, 10);
-        let usuario = JSON.stringify({ name, email, password: senhaCriptografada })
-        fs.writeFileSync(modelCadastroUser, usuario); //escreve no arquivo)
-        res.send("usuario cadastrado com sucesso"); 
+    registroUser: async (req, res) => {
+        let { email, senha } = req.body
+        const usuario = await Usuario.create({
+            email,
+            senha
+        })
+
+        res.status(200).json(usuario) 
     },
     pagamento: (req, res) => {
         res.render('pagamento')

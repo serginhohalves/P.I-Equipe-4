@@ -1,4 +1,4 @@
-let produtos = require('../model/produtos.json')
+// let produtos = require('../model/produtos.json')
 
 const indexController = {
     index:(req, res) => {

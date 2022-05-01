@@ -10,6 +10,7 @@ const fs = require('fs')
 
 var indexRouter = require('./routes/index');
 var users = require('./routes/users');
+let produtos = require('./routes/produtos')
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use(cookieParser())
 
 app.use('/', indexRouter);
 app.use('/users', users);
+app.use('/produtos', produtos)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

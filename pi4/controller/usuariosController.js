@@ -1,3 +1,6 @@
+const {Usuario} = require('../models')
+const sequelize = require('sequelize')
+
 const usuariosController = {
     login: (req, res) => {
         res.render('login')
@@ -7,6 +10,18 @@ const usuariosController = {
     },
     pagamento: (req, res) => {
         res.render('pagamento')
+    },
+
+    //registro de usuario com rota segura
+    registroPost: async(req, res) => {
+        let {email,senha} = req.body
+
+        const usuario = await Usuario.create({
+            email,
+            senha
+        })
+
+        res.status(200).send(usuario)
     }
 }
 

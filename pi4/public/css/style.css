@@ -15,7 +15,7 @@ body {
 
 }
 
-p {
+/* p {
     line-height: 1.6;
     text-align : justify;
     font-size  : 14px;
@@ -35,13 +35,13 @@ img {
 
 /* Header */
 
-.container {
+/* .container {
     margin    : auto;
     background: #D3CE3D;
     padding   : 10px;
 
 
-}
+} */
 
 .logo {
     display         : flex;
@@ -298,7 +298,7 @@ section{
     line-height: 2.0;
 }
 
-.price button{
+/* .price button{
     display:flex;
     background-color: #0f6d06;
     color           : #fff;
@@ -308,7 +308,7 @@ section{
     padding         : 14px 40px;
     font-size       : 16px;
     cursor          : pointer;
-}
+} */
 .price span{
     font-size: 20px;
     font-weight: bold;

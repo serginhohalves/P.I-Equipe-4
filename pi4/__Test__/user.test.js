@@ -3,7 +3,11 @@ const request = require('supertest')
 const app = require('../app')
 
 describe('Usuários', () => {
-  beforeEach(async () => {})
+  beforeEach(async () => {
+    Usuario.destroy({
+      where: {},
+    })
+  })
 
   test('Deve cadastrar Usuário no banco', (done) => {
     let email = 'rafael@mail.com'

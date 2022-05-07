@@ -11,12 +11,29 @@ const usuariosController = {
     },
     registroUser: async (req, res) => {
         let { email, senha } = req.body
-        const usuario = await Usuario.create({
-            email,
-            senha
+        let senhaHash = await bcrypt.hash(senha, 10)
+        let oUsuarioJaExiste = await Usuario.findOne({
+            where:{
+                email
+            }
         })
-
-        res.status(200).json(usuario) 
+        if(!oUsuarioJaExiste){
+            const usuario = await Usuario.create({
+                email,
+                senha: senhaHash
+            })
+    
+            res.status(200).json({
+                success: true,
+                usuario: usuario.email,
+                id: usuario.id
+            }) 
+        }else{
+            return res.status(401).json({
+                success: false,
+                message: 'Já existe um usuário cadastrado para este email'
+            })
+        }
     },
     pagamento: (req, res) => {
         res.render('pagamento')

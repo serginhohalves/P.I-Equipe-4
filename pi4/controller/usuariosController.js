@@ -7,6 +7,22 @@ const usuariosController = {
     login: (req, res) => {
         res.render('login')
     },
+    loginPost: capturarErrosAsync( async(req, res, next) => {
+        let {email, senha } = req.body
+        const usuario = await Usuario.findOne({
+            where:{
+                email
+            }
+        })
+        let aSenhaCombina = await bcrypt.compare(senha, usuario.senha)
+        if(aSenhaCombina){
+            res.cookie = email
+            res.status(200).json({
+                success: true, 
+                cookie:res.cookie
+            })
+        }
+    }),
     registro: (req, res) => {
         res.render('Registro')
     },

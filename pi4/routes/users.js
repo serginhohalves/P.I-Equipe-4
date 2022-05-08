@@ -7,10 +7,7 @@ let usuariosController = require('../controller/usuariosController')
 //Tela de Login
 router.get('/login', usuariosController.login)
 
-//Tela de Registro
 
-router.get('/registro', usuariosController.registro)
-router.post('/registro', usuariosController.registroUser)
 
 router.get('/pagamento', usuariosController.pagamento)
 

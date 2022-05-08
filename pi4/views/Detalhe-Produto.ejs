@@ -5,50 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 
 <body>
     <!-- Cabecalho -->
-    <header>
-        <nav class="container">
-            <section class="p-header">
-                <div class="logo">
-                    <a href="PaginaPrincipal.html"><img src="img/paw-solid.svg" alt=""></a>
-                    <p>Pet & Cia</p>
-                </div>
-
-                <input type="text" placeholder="Pesquise seu Produto">
-
-
-                <button class="logo">
-                    <img src="img/user-alt-solid.svg" alt="">
-                    <a href="Login.html">Entre ou Registre-se</a>
-                </button>
-                <a href="Pagamento.html"><img src="img/shopping-cart-solid.svg" alt=" Carrinho de Compras"
-                        id="carrinho"></a>
-
-            </section>
-
-            <section class="s-header">
-                <ul>
-                    <li>Produtos</li>
-                    <li>Serviços</li>
-                    <li>Contato</li>
-                    <li>Sobre Nós</li>
-                    <li>Promoções</li>
-                </ul>
-            </section>
-        </nav>
-    </header>
-
+    <%-  include('partials/header.ejs'); %>
 
     <main>
 
         <section class="descricao">
             <div>
-                <img src="img/Produto Cachorro.jpg" alt="">
+                <img src="../public/img/Produto-Cachorro" alt="">
             </div>
 
             <section class="s-descricao">
@@ -77,60 +46,7 @@
 
 
 
-    <footer>
-        <div class="social">
-            <div>
-                <h4>Redes Sociais</h4>
-                <ul>
-                    <li><img src="img/instagram-brands (1).svg" alt="Instagram"><a
-                            href="https://instagram.com/pet&cia"></a>Instagram</li>
-                    <li><img src="img/facebook-brands.svg" alt="Facebook"><a
-                            href="https://facebook.com/pet&cia"></a>Facebook</li>
-                    <li><img src="img/twitter-brands.svg" alt="Twitter"><a
-                            href="https://twitter.com/pet&cia"></a>Twitter</li>
-
-                </ul>
-            </div>
-
-
-            <div class="enderco">
-                <h4>Endereço</h4>
-                <p>Rua das Creoulas 456 Recife - PE</p>
-                <p>Cep: 50000000</p>
-            </div>
-
-            <div class="central">
-                <h4>Central do Cliente</h4>
-                <ul>
-                    <li>Pedidos</li>
-                    <li>Cadastro</li>
-                    <li>Ouvidoria</li>
-                </ul>
-            </div>
-
-            <div class="departamento">
-                <h4>Departamentos</h4>
-                <ul>
-                    <li><img src="img/dog-solid.svg" alt="Departamento de Cães"></li>
-                    <li><img src="img/cat-solid.svg" alt="Departamento de Gatos"></li>
-                    <li><img src="img/fish-solid.svg" alt="Departamento de Peixes"></li>
-                    <li><img src="img/bird.png" alt="Departamento de Peixes"></li>
-
-                </ul>
-
-            </div>
-
-
-        </div>
-
-
-
-    </footer>
-
-
-
-
-
+    <%- include('partials/footer.ejs'); %>
 
 </body>
 

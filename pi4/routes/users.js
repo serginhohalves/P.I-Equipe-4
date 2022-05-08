@@ -6,6 +6,7 @@ let usuariosController = require('../controller/usuariosController')
 
 //Tela de Login
 router.get('/login', usuariosController.login)
+router.post('/login', usuariosController.loginPost)
 
 //Tela de Registro
 

@@ -250,3 +250,13 @@ p.g {
     margin-bottom: 10px;
 
 }
+.social {
+    background: #D3CE3D;
+    display: flex;
+    justify-content: space-around;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

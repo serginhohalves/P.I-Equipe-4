@@ -1,11 +1,6 @@
 const fs = require("fs"); //importa o modulo fs
 const path = require("path"); //para pegar o caminho do arquivo
 const bcrypt = require("bcrypt");
-const {Usuario} = require("../models");
-const usuariosBanco = require("../model/usuarios.json");
-
-
-
 
 
 const usuariosController = {
@@ -14,6 +9,7 @@ const usuariosController = {
     },
     registro: (req, res) => {
         res.render('Registro')
+
     },
     // registro do usuario no banco de dados
     registroPost: async(req, res) => {

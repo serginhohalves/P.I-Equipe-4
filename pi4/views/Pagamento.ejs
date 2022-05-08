@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>
+    <%-  include('partials/header.ejs'); %>
         <nav class="container">
             <section class="p-header">
                 <div class="logo">
@@ -29,7 +29,7 @@
                 <h1> teste</h1>
             </section>
         </nav>
-    </header>
+    
 
     <main>
 
@@ -76,7 +76,7 @@
         
     </main>
 
-    <footer>
+    
         <div class="footer">
             <div class="p-footer">
                 <ul>
@@ -96,7 +96,7 @@
         </div>
         </div>
 
-    </footer>
+        <%-  include('partials/footer.ejs'); %>
 </body>
 
 </html>

@@ -37,6 +37,21 @@ test('Deve fazer login e passar o cookie', done => {
   })
 })
 
+test('Deve falhar ao tentar cadastrar usuario com email existente', done => {
+  let email = 'rafael@mail.com'
+  let senha = '123456'
+
+  request(app)
+  .post('/users/registro')
+  .send({email, senha})
+  .then(response => {
+    expect(response.statusCode).toBe(401)
+    expect(response.body.cookie).toBeUndefined()
+    expect(response.body.message).toBe('Já existe uma conta cadastrada para este email.')
+    done()
+  })
+})
+
 describe('Testa o diretorio raiz', () => {
   test('Deve responder o metodo GET', (done) => {
     request(app)

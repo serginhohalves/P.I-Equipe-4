@@ -1,0 +1,146 @@
+[
+    {
+        "nome": "Ração premium filhote",
+        "preco": "R$ 150,00",
+        "categoria": "Alimentação",
+        "imagem": "https://static.petz.com.br/fotos/1630012033940.jpg"
+    },
+    {
+        "nome": "Ração premium adulto",
+        "preco": "R$ 180,00",
+        "categoria": "Alimentação",
+        "imagem": "https://static.petz.com.br/fotos/1630012529775.jpg"
+    },
+    {
+        "nome": "Biscoito Golden Cookie para Cães Adultos de Raças Pequenas 350g",
+        "preco": "R$ 19,99",
+        "categoria": "Alimentação",
+        "imagem": "https://static.petz.com.br/fotos/1628787231397.jpg"
+    },
+    {
+        "nome": "Snack Dog Licious Dental Fresh - 65g",
+        "preco": "R$ 12,90",
+        "categoria": "Alimentação",
+        "imagem": "https://static.petz.com.br/fotos/1601392853535.jpg"
+    },
+    {
+        "nome": "Ração para gatos",
+        "preco": "R$ 25,00",
+        "categoria": "Alimentação",
+        "imagem": "https://static.petz.com.br/fotos/1621264740944.jpg"
+    },
+    {
+        "nome": "Ração Premier para Gatos Castrados de 6 meses a 6 anos Sabor Frango",
+        "preco": "R$ 35,00",
+        "categoria": "Alimentação",
+        "imagem": "https://static.petz.com.br/fotos/1646142863648.jpg"
+    },
+    {
+        "nome": "Petisco Whiskas Temptations Antibola de Pelo para Gatos Adultos",
+        "preco": "R$ 125,00",
+        "categoria": "Alimentação",
+        "imagem": "https://static.petz.com.br/fotos/1599136729044.jpg"
+    },
+    {
+        "nome": "Snack Purina Dentalife para Gatos Sabor Frango 40g",
+        "preco": "R$ 12,90",
+        "categoria": "Alimentação",
+        "imagem": "https://static.petz.com.br/fotos/1627399332418.jpg"
+    },
+    {
+        "nome": "Antipulgas Simparic 20 mg para cães 5,1 a 10 kg - Zoetis",
+        "preco": "R$ 105,00",
+        "categoria": "Saúde",
+        "imagem": "https://static.petz.com.br/fotos/1502308227115.jpg"
+    },
+    {
+        "nome": "Antipulgas e Carrapatos Bravecto MSD para Cães de 4,5 a 10 kg",
+        "preco": "R$ 213,00",
+        "categoria": "Saúde",
+        "imagem": "https://static.petz.com.br/fotos/1575296646776.jpg"
+    },
+    {
+        "nome": "Anti Pulgas Bravecto Plus para Gatos de Até 2,5kg",
+        "preco": "R$ 185,99",
+        "categoria": "Saúde",
+        "imagem": "https://static.petz.com.br/fotos/1625081555143.jpg"
+    },
+    {
+        "nome": "Vermífugo Milbemax para Gatos 16/40mg",
+        "preco": "R$ 49,99",
+        "categoria": "Saúde",
+        "imagem": "https://static.petz.com.br/fotos/1572360557501.jpg"
+    },
+    {
+        "nome": "Comedouro NF Pet Pesado em Alumínio",
+        "preco": "R$ 15,00",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1578691259266.jpg"
+    },
+    {
+        "nome": "Comedouro Chalesco cães e gatos Duplo Inox",
+        "preco": "R$ 52,80",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1457993730827.jpg"
+    },
+    {
+        "nome": "Comedouro Chalesco Automático Disco",
+        "preco": "R$ 399,00",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1600099694953.jpg"
+    },
+    {
+        "nome": "Porta Ração Furacão Pet para Cães e Gatos Preto 6kg",
+        "preco": "R$ 75,90",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1511355953282.jpg"
+    },
+    {
+        "nome": "Guia Retrátil Chalesco para Cães - Cores Sortidas",
+        "preco": "R$ 39,99",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1623179283813.jpg"
+    },
+    {
+        "nome": "Coleira Zee.Dog Gotham Preta para Cães",
+        "preco": "R$ 79,00",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1633711861682.jpg"
+    },
+    {
+        "nome": "Coleira Zee.Cat Gotham Preta para Gatos",
+        "preco": "R$59,99",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1633713673982.jpg"
+    },
+    {
+        "nome": "Coleira Zee.Cat Mahalo para Gatos",
+        "preco": "R$59,00",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1633713490592.jpg"
+    },
+    {
+        "nome": "Protetor Solar Docg Make Me Bluish para Cães e Gatos 30g",
+        "preco": "R$52,99",
+        "categoria": "Saúde",
+        "imagem": "https://static.petz.com.br/fotos/1595855770082.jpg"
+    },
+    {
+        "nome": "Protetor Solar Docg Make Me Pinky para Cães e Gatos 30g",
+        "preco": "R$52,99",
+        "categoria": "Saúde",
+        "imagem": "https://static.petz.com.br/fotos/1595855907658.jpg"
+    },
+    {
+        "nome": "Cama Zee.Dog Skull Zee.Bed Preta para Cães",
+        "preco": "R$499,99",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1632948750925.jpg"
+    },
+    {
+        "nome": "Cama Zee.Cat Terracota para Gatos",
+        "preco": "R$399,99",
+        "categoria": "Acessórios",
+        "imagem": "https://static.petz.com.br/fotos/1637938528052.jpg"
+    }
+]

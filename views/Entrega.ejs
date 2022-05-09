@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>
+    <%-  include('partials/header.ejs'); %>
         <nav class="container">
             <section class="p-header">
                 <div class="logo">
@@ -28,32 +28,36 @@
                 </ul>
             </section>
         </nav>
-    </header>
+    
 
     <main>
-        
-        <section>
-            <div>
-                <h3>Carrinho de Compras</h3>
-            </div>
+        <section class="form-p">
+            <h3>Preencha o endereço para entrega</h3>
+            <form action="/endereco" class="form-s">
+    
+                <label for="logradouro">Logradouro</label>
+                <input type="text">
+    
+                <label for="numero">Complemento</label>
+                <input type="text">
+    
+                <label for="cep">CEP</label>
+                <input type="text">
+    
+                <label for="bairro">Bairro</label>
+                <input type="text">
+    
+                <label for="cidade">Cidade</label>
+                <input type="text">
+            </form>
 
-            <p class="b">Editar sacola</p>
-            </div>
-            <div class="container2">
-                <p class="c">Resumo do pedido</p>
-            </div>
-        </section>
-        <section>
-            <p class="d">Alterar endereço</p>
-            </div>
-            <div class="container3">
-                <p class="e">Endereço</p>
-            </div>
+            <button>Enviar</button>
         </section>
         
+    
     </main>
 
-    <footer>
+    
         <div class="footer">
             <div class="p-footer">
                 <ul>
@@ -73,7 +77,7 @@
         </div>
         </div>
 
-    </footer>
+        <%-  include('partials/footer.ejs'); %>
 </body>
 
 </html>

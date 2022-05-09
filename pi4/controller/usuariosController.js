@@ -1,6 +1,7 @@
 const { sequelize, Usuario } = require('../models')
 const bcrypt = require("bcrypt");
 const capturarErrosAsync = require('../middleware/capturarErrosAsync')
+const ManipuladorDeErros = require('../utils/ManipuladorDeErros')
 
 
 const usuariosController = {
@@ -26,7 +27,7 @@ const usuariosController = {
     registro: (req, res) => {
         res.render('Registro')
     },
-    registroUser: capturarErrosAsync(async (req, res) => {
+    registroUser: capturarErrosAsync(async (req, res, next) => {
         let { email, senha } = req.body
         let senhaHash = await bcrypt.hash(senha, 10)
         let oUsuarioJaExiste = await Usuario.findOne({
@@ -46,10 +47,7 @@ const usuariosController = {
                 id: usuario.id
             }) 
         }else{
-            return res.status(401).json({
-                success: false,
-                message: 'Já existe um usuário cadastrado para este email'
-            })
+            return next(new ManipuladorDeErros('Já existe uma conta cadastrada para este email.', 401))
         }
     }),
     pagamento: (req, res) => {

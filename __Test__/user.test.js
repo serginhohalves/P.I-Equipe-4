@@ -75,9 +75,24 @@ test('Deve responder com erro se não encontrar o usuário', done => {
   .send({email, senha})
   .then(response => {
     expect(response.statusCode).toBe(400)
-    expect(response.body.message).toBe('Email ou senha invalidos')
+    expect(response.body.message).toBe('Email ou senha inválidos')
     done()
   })
+})
+
+test('Deve responder com erro ao enviar senha incorreta', done => {
+  let email = 'rafael@mail.com'
+  let senha = '1234789'
+  
+  request(app)
+  .post('/users/login')
+  .send({email, senha})
+  .then(response => {
+    expect(response.statusCode).toBe(400)
+    expect(response.body.message).toBe('Email ou senha inválidos')
+    done()
+  })
+
 })
 
 describe('Testa o diretorio raiz', () => {
@@ -85,7 +100,8 @@ describe('Testa o diretorio raiz', () => {
     request(app)
       .get('/')
       .then((response) => {
-        expect(response.type).toBe('application/json')
+        expect(response.statusCode).toBe(200)
+        expect(response.type).toBe('text/html')
         done()
       })
   })

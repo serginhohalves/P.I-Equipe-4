@@ -20,7 +20,7 @@ const usuariosController = {
             }
         })
         if(!usuario){
-            return next(new ManipuladorDeErros('Email ou senha invalidos', 400))
+            return next(new ManipuladorDeErros('Email ou senha inválidos', 400))
         }
 
         let aSenhaCombina = await bcrypt.compare(senha, usuario.senha)

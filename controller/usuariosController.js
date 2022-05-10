@@ -10,11 +10,19 @@ const usuariosController = {
     },
     loginPost: capturarErrosAsync( async(req, res, next) => {
         let {email, senha } = req.body
+        if(!email || !senha){
+            return next(new ManipuladorDeErros('Por favor, digite o email e a senha', 400))
+        }
+
         const usuario = await Usuario.findOne({
             where:{
                 email
             }
         })
+        if(!usuario){
+            return next(new ManipuladorDeErros('Email ou senha invalidos', 400))
+        }
+
         let aSenhaCombina = await bcrypt.compare(senha, usuario.senha)
         if(aSenhaCombina){
             res.cookie = email
@@ -23,6 +31,10 @@ const usuariosController = {
                 cookie:res.cookie
             })
         }
+        if(!aSenhaCombina){
+            return next(new ManipuladorDeErros('Email ou senha inválidos', 400))
+        }
+
     }),
     registro: (req, res) => {
         res.render('Registro')

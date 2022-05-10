@@ -1,6 +1,7 @@
 const request = require('supertest')
 const { Produto } = require('../models')
 const app = require('../app')
+const seeder = require('../utils/seeder')
 
 describe('Produtos', () => {
   test('Detalhe produto', (done) => {
@@ -10,6 +11,14 @@ describe('Produtos', () => {
         expect(response.statusCode).toBe(200)
         done()
       })
+  })
+
+  test('Deve inserir muitos produtos no banco de vez', async(done) => {
+   await seeder()
+    .then(response => {
+      expect(response).toBeDefined()
+      done()
+    })
   })
 
   test('Inserir Produto no banco', (done) => {

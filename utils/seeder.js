@@ -4,14 +4,13 @@ const produtoJson = require('../models/produtos.json')
 const seeder = async () => {
   try {
     await Produto.destroy({
-        where:{}
+      where: {},
     })
-    await Produto.bulkCreate(produtoJson)
-    sequelize.close()
+    let listaDeProdutos = await Produto.bulkCreate(produtoJson)
+    return listaDeProdutos
   } catch (error) {
     console.log(error)
   }
-
 }
 
 seeder()

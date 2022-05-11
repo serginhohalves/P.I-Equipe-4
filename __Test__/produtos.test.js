@@ -19,7 +19,7 @@ describe('Produtos', () => {
 
   test('Detalhe produto', (done) => {
     request(app)
-      .get('/produtos/:id/detalhe')
+      .get('/produtos/1/detalhe')
       .then((response) => {
         expect(response.statusCode).toBe(200)
         expect(response.type).toBe('text/html')

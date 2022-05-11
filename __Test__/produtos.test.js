@@ -13,7 +13,7 @@ describe('Produtos', () => {
 
   test('Deve adicionar muitos produtos no banco', async () => {
     await seeder().then( data => {
-     expect(data).toBeDefined()
+     expect(data).toBe('Todos os produtos foram adicionados com sucesso!')
     })
   })
 

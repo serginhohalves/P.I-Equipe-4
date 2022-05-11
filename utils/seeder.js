@@ -6,10 +6,10 @@ const seeder = async () => {
     await Produto.destroy({
       where: {},
     })
-    let listaDeProdutos = await Produto.bulkCreate(produtoJson)
-    return listaDeProdutos
+    await Produto.bulkCreate(produtoJson)
+    return 'Todos os produtos foram adicionados com sucesso!'
   } catch (error) {
-    console.log(error)
+    return error
   }
 }
 

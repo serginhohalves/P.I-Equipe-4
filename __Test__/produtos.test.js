@@ -1,12 +1,19 @@
 const request = require('supertest')
 const { Produto } = require('../models')
 const app = require('../app')
+const seeder = require('../utils/seeder')
 
 describe('Produtos', () => {
   
   beforeEach( async () => {
     await Produto.destroy({
       where:{},
+    })
+  })
+
+  test('Deve adicionar muitos produtos no banco', async () => {
+    await seeder().then( data => {
+     expect(data).toBeDefined()
     })
   })
 

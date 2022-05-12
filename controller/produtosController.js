@@ -19,8 +19,11 @@ const produtosController = {
             produto
         })
     },
-    detalheProduto: (req, res) => {
-        res.render('Detalhe-Produto', {produtos:produtos})
+    detalheProduto: async(req, res) => {
+        let { id } = req.params
+        let produto = await Produto.findByPk(id)
+
+        res.render('Detalhe-Produto', {produto:produto})
     }
 }
 

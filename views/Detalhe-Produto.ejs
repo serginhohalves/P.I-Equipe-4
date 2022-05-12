@@ -17,25 +17,20 @@
 
         <section class="descricao">
             <div>
-                <img src="../public/img/Produto-Cachorro" alt="">
+                <img src=<%=produto.imagem_produto%> > 
             </div>
 
             <section class="s-descricao">
                 <div>
-                    <h2>Ração Pedigre Adulto</h2>
+                    <h2><%=produto.nome%></h2>
                     <p>Código do produto:  00100100102019</p>
                     <p>Descrição: 
-                        - Indicada para cães adultos;
-                        - Ideal para os pets de pequeno porte;
-                        - Grãos adequados que facilitam a mastigação;
-                        - Oferece equilíbrio entre os ômegas 3 e 6;
-                        - Contém o nível ideal de proteínas e nutrientes,
-                        - Disponível em embalagens de 1kg, 3kg e 15kg.
+                        <%=produto.descricao%>
                     </p>    
                 </div>
                 
                 <div class="price"> 
-                    <span>R$150,00</span>
+                    <span>R$<%= produto.valor%></span>
                     <a href="Sacola.html"><button>Adicionar ao Carrinho</button></a>
                 </div>
                 

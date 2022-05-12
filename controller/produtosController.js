@@ -23,7 +23,7 @@ const produtosController = {
         let { id } = req.params
         let produto = await Produto.findByPk(id)
 
-        res.render('Detalhe-Produto', {produto})
+        res.render('Detalhe-Produto', {produto:produto})
     }
 }
 

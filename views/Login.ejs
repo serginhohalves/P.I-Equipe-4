@@ -15,18 +15,18 @@
             <a href="/"><img src="../img/paw-solid.svg" alt="logo"></a>
             <h3>Acesse Sua conta</h3>
         </div>
-        <form>
+        <form action="/users/login" method="post">
             <div class="controle-form">
-                <input type="text" placeholder="Email" required>                
+                <input type="text" placeholder="Email" name="email" required>                
                 
                
             </div>
             <div class="controle-form">
-                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Senha" name="senha" required>
                 
             </div>
+            <button class="btn" type="submit">Entrar</button>
         </form>
-        <button class="btn">Entrar</button>
         <p>Ainda não tem registro?</p>
         <a href="/users/registro">Registre-se</a>
     </div>

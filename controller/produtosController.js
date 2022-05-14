@@ -1,8 +1,9 @@
 const produtos = require('../models/produtos.json')
 const {Produto} = require('../models')
+const capturarErrosAsync = require('../middleware/capturarErrosAsync')
 
 const produtosController = {
-    novoProduto: async(req, res, next) => {
+    novoProduto: capturarErrosAsync( async(req, res, next) => {
         let {nome, descricao, valor, categoria, imagem_produto, estoque } = req.body
         
         const produto = await Produto.create({
@@ -18,9 +19,12 @@ const produtosController = {
             success: true, 
             produto
         })
-    },
-    detalheProduto: (req, res) => {
-        res.render('Detalhe-Produto', {produtos:produtos})
+    }),
+    detalheProduto: async(req, res) => {
+        let { id } = req.params
+        let produto = await Produto.findByPk(id)
+
+        res.render('Detalhe-Produto', {produto:produto})
     }
 }
 

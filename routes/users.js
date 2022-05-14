@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 let usuariosController = require('../controller/usuariosController')
+const validaUsuarioLogado = require('../middleware/validaUsuarioLogado')
 
 /* GET users listing. */
 
@@ -14,6 +15,7 @@ router.get('/registro', usuariosController.registro)
 router.post('/registro', usuariosController.registroUser)
 
 router.get('/pagamento', usuariosController.pagamento)
+router.delete('/deletar/:id', validaUsuarioLogado, usuariosController.deletarUsuario)
 
 
 

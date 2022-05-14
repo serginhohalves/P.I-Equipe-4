@@ -28,18 +28,5 @@
     "jest": "^28.1.0",
     "sequelize-cli": "^6.4.1",
     "supertest": "^6.2.3"
-  },
-  "description": "Esse é o repositório do Projeto Integrador da equipe 4 do curso de desenvolvimento web Full Stack da Digital House!",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serginhohalves/P.I-Equipe-4.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/serginhohalves/P.I-Equipe-4/issues"
-  },
-  "homepage": "https://github.com/serginhohalves/P.I-Equipe-4#readme"
+  }
 }

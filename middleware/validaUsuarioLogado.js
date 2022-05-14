@@ -1,7 +1,17 @@
-const validaUsuarioLogado = (req, res, next) => {
-    const usuario = req.session.user
-    console.log(req.session)
-    if(usuario){
+const { Usuario } = require('../models')
+
+const validaUsuarioLogado = async (req, res, next) => {
+    const usuarioSession = req.session.user
+
+    if(usuarioSession){
+        const usuario = await Usuario.findOne({
+            where: {
+              email: usuarioSession,
+            },
+          })
+    
+        req.usuario = usuario
+    
         next()
     }else{
         res.send("Area restrita")

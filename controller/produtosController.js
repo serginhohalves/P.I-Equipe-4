@@ -25,6 +25,17 @@ const produtosController = {
         let produto = await Produto.findByPk(id)
 
         res.render('Detalhe-Produto', {produto:produto})
+    },
+    deletaProduto: async(req, res) => {
+        let { id } = req.params
+        let produto = await Produto.destroy({
+            where: {
+                id
+            }
+        })
+        res.send("Produto deletado")
+
+        
     }
 }
 

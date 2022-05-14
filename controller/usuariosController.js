@@ -26,6 +26,7 @@ const usuariosController = {
         let aSenhaCombina = await bcrypt.compare(senha, usuario.senha)
         if(aSenhaCombina){
            req.session.user = email
+           res.send("usuario logado")
            res.redirect('/')
         }
         if(!aSenhaCombina){
@@ -37,7 +38,7 @@ const usuariosController = {
         res.render('Registro')
     },
     registroUser: capturarErrosAsync(async (req, res, next) => {
-        let { email, senha } = req.body
+        let { email, senha, nome, atributo } = req.body
         let senhaHash = await bcrypt.hash(senha, 10)
         let oUsuarioJaExiste = await Usuario.findOne({
             where:{
@@ -47,7 +48,9 @@ const usuariosController = {
         if(!oUsuarioJaExiste){
             const usuario = await Usuario.create({
                 email,
-                senha: senhaHash
+                senha: senhaHash,
+                nome,
+                atributo
             })
     
             res.status(200).json({

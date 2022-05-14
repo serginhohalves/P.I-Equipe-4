@@ -24,14 +24,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
-	secret: 'Pet & Cia',
-
-	resave: false,
-
-	saveUninitialized: true, 
-
-}));
+app.use(
+	session({
+	  resave: true,
+	  saveUninitialized: true,
+	  secret: 'palavraSecreta',
+	  cookie: {maxAge: 100 * 60 * 60 * 24}
+	})
+  )
 app.use(cookieParser())
 
 

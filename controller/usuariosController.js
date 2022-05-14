@@ -25,11 +25,7 @@ const usuariosController = {
 
         let aSenhaCombina = await bcrypt.compare(senha, usuario.senha)
         if(aSenhaCombina){
-            res.cookie = email
-            res.status(200).json({
-                success: true, 
-                cookie:res.cookie
-            })
+           req.session.user = usuario.email
         }
         if(!aSenhaCombina){
             return next(new ManipuladorDeErros('Email ou senha inválidos', 400))

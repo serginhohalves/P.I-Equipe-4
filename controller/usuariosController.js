@@ -26,7 +26,6 @@ const usuariosController = {
         let aSenhaCombina = await bcrypt.compare(senha, usuario.senha)
         if (aSenhaCombina) {
             req.session.user = email
-            res.send("usuario logado")
             res.redirect('/')
         }
         if (!aSenhaCombina) {
@@ -73,7 +72,33 @@ const usuariosController = {
             }
         })
         res.send('usuario deletado')
-    }
+    },
+    atualizarSenha: capturarErrosAsync(async (req, res, next) => {
+        let { senhaAtual, novaSenha } = req.body
+        const { usuario } = req
+    
+        const aSenhaCombina = await bcrypt.compare(senhaAtual, usuario.senha)
+        if (!aSenhaCombina) {
+          res.send('Senha atual incorreta!')
+        }
+    
+        const novaSenhaHash = await bcrypt.hash(novaSenha, 10)
+        await Usuario.update(
+          {
+            senha: novaSenhaHash,
+          },
+          {
+            where: {
+              id: usuario.id,
+            },
+          },
+        )
+    
+        res.status(200).json({
+          success: true,
+          message: "Senha atualizado com sucesso"
+        })
+      }),
 }
 
 module.exports = usuariosController

@@ -17,6 +17,9 @@ router.post('/registro', usuariosController.registroUser)
 router.get('/pagamento', usuariosController.pagamento)
 router.delete('/deletar/:id', validaUsuarioLogado, usuariosController.deletarUsuario)
 
+router.put('/eu/alterarsenha', validaUsuarioLogado, usuariosController.atualizarSenha)
+
+
 
 
 module.exports = router;

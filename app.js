@@ -26,12 +26,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(
 	session({
-	  resave: true,
-	  saveUninitialized: true,
-	  secret: 'palavraSecreta',
-	  cookie: {maxAge: 100 * 60 * 60 * 24}
+		resave: true,
+		saveUninitialized: true,
+		secret: 'palavraSecreta',
+		cookie: { maxAge: 100 * 60 * 60 * 24 }
 	})
-  )
+)
 app.use(cookieParser())
 
 
@@ -41,8 +41,8 @@ app.use('/users', users);
 app.use('/produtos', produtos)
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.use(function (req, res, next) {
+	next(createError(404));
 });
 
 // error handler

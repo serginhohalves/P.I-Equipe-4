@@ -8,28 +8,28 @@ const usuariosController = {
     login: (req, res) => {
         res.render('login')
     },
-    loginPost: capturarErrosAsync( async(req, res, next) => {
-        let {email, senha } = req.body
-        if(!email || !senha){
+    loginPost: capturarErrosAsync(async (req, res, next) => {
+        let { email, senha } = req.body
+        if (!email || !senha) {
             return next(new ManipuladorDeErros('Por favor, digite o email e a senha', 400))
         }
 
         const usuario = await Usuario.findOne({
-            where:{
+            where: {
                 email
             }
         })
-        if(!usuario){
+        if (!usuario) {
             return next(new ManipuladorDeErros('Email ou senha inválidos', 400))
         }
 
         let aSenhaCombina = await bcrypt.compare(senha, usuario.senha)
-        if(aSenhaCombina){
-           req.session.user = email
-           res.send("usuario logado")
-           res.redirect('/')
+        if (aSenhaCombina) {
+            req.session.user = email
+            res.send("usuario logado")
+            res.redirect('/')
         }
-        if(!aSenhaCombina){
+        if (!aSenhaCombina) {
             return next(new ManipuladorDeErros('Email ou senha inválidos', 400))
         }
 
@@ -41,24 +41,24 @@ const usuariosController = {
         let { email, senha, nome, atributo } = req.body
         let senhaHash = await bcrypt.hash(senha, 10)
         let oUsuarioJaExiste = await Usuario.findOne({
-            where:{
+            where: {
                 email
             }
         })
-        if(!oUsuarioJaExiste){
+        if (!oUsuarioJaExiste) {
             const usuario = await Usuario.create({
                 email,
                 senha: senhaHash,
                 nome,
                 atributo
             })
-    
+
             res.status(200).json({
                 success: true,
                 usuario: usuario.email,
                 id: usuario.id
-            }) 
-        }else{
+            })
+        } else {
             return next(new ManipuladorDeErros('Já existe uma conta cadastrada para este email.', 401))
         }
     }),

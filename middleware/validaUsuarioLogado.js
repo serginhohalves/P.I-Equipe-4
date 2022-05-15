@@ -3,17 +3,17 @@ const { Usuario } = require('../models')
 const validaUsuarioLogado = async (req, res, next) => {
     const usuarioSession = req.session.user
 
-    if(usuarioSession){
+    if (usuarioSession) {
         const usuario = await Usuario.findOne({
             where: {
-              email: usuarioSession,
+                email: usuarioSession,
             },
-          })
-    
+        })
+
         req.usuario = usuario
-    
+
         next()
-    }else{
+    } else {
         res.send("Area restrita")
     }
 }

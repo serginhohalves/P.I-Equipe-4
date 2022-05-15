@@ -99,6 +99,10 @@ const usuariosController = {
           message: "Senha atualizado com sucesso"
         })
       }),
+      logout: capturarErrosAsync( async (req, res, next) => {
+        req.session.destroy()
+        res.send('Logout com sucesso')
+      })
 }
 
 module.exports = usuariosController

@@ -1,5 +1,5 @@
 const verificaPrivilegios = async (req, res, next) => {
-    const { usuario } = req
+    const { usuario } = req.session
 
     if (usuario.atributo == 'admin') {
 

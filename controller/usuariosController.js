@@ -25,7 +25,7 @@ const usuariosController = {
 
         let aSenhaCombina = await bcrypt.compare(senha, usuario.senha)
         if (aSenhaCombina) {
-            req.session.user = email
+            req.session.user = usuario
             res.redirect('/')
         }
         if (!aSenhaCombina) {
@@ -64,7 +64,7 @@ const usuariosController = {
     pagamento: (req, res) => {
         res.render('pagamento')
     },
-    deletarUsuario: async (req, res) => {
+    deletarUsuario: capturarErrosAsync(async (req, res) => {
         let { id } = req.params
         const usuario = await Usuario.destroy({
             where: {
@@ -72,7 +72,7 @@ const usuariosController = {
             }
         })
         res.send('usuario deletado')
-    },
+    }),
     atualizarSenha: capturarErrosAsync(async (req, res, next) => {
         let { senhaAtual, novaSenha } = req.body
         const { usuario } = req

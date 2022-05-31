@@ -32,7 +32,6 @@ test('Deve fazer login e passar o cookie', done => {
     .send({ email, senha })
     .then(response => {
       expect(response.type).toBe('application/json')
-      expect(response.body.cookie).toBeDefined()
       done()
     })
 })

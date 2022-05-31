@@ -7,6 +7,7 @@ const seeder = async () => {
       where: {},
     })
     await Produto.bulkCreate(produtoJson)
+    console.log('Todos os produtos foram adicionados com sucesso!')
     return 'Todos os produtos foram adicionados com sucesso!'
   } catch (error) {
     return error

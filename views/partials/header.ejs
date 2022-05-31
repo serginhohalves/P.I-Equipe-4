@@ -9,7 +9,7 @@
             <input type="text" placeholder="Pesquise seu Produto">
 
             <% if(typeof user != "undefined"){%>
-                <h1><%= user.email %></h1>
+                <h1>Bem vindo, <%= user.nome %></h1>
                 <%} else{   %>
 
             <button class="logo">
@@ -19,11 +19,6 @@
             <%}  %>
             <a href="/users/pagamento"><img src="img/shopping-cart-solid.svg" alt=" Carrinho de Compras"
                     id="carrinho"></a>
-                <div class="usuriarioLogado">
-                    <ul>
-                        <a src="/users/eu/alterarsenha"><li>Atualizar senha</li></a>
-                    </ul>
-                </div>
         </section>
 
         <section class="s-header">

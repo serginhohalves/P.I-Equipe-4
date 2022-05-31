@@ -10,12 +10,13 @@ describe('Usuários', () => {
   })
 
   test('Deve cadastrar Usuário no banco', (done) => {
+    let nome = 'Rafael'
     let email = 'rafael@mail.com'
     let senha = '123456'
 
     request(app)
       .post('/users/registro')
-      .send({ email, senha })
+      .send({ email, senha, nome })
       .then((response) => {
         expect(response.statusCode).toBe(200)
         done()

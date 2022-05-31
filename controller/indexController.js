@@ -7,7 +7,12 @@ const listaDeProdutos = async () => {
 
 const indexController = {
     index: async (req, res) => {
-        res.render('index', { listaProdutos: await listaDeProdutos() })
+         if(req.session.user) {
+            res.render('index', { listaProdutos: await listaDeProdutos(), user:req.session.user} )  
+         } else{
+            res.render('index', { listaProdutos: await listaDeProdutos() })
+         }
+        
     }
 }
 

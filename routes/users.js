@@ -18,6 +18,7 @@ router.get('/pagamento', usuariosController.pagamento)
 router.delete('/deletar/:id', validaUsuarioLogado, usuariosController.deletarUsuario)
 
 router.put('/eu/alterarsenha', validaUsuarioLogado, usuariosController.atualizarSenha)
+router.post('/eu/logout', validaUsuarioLogado, usuariosController.logout)
 
 
 

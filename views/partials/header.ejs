@@ -8,14 +8,17 @@
 
             <input type="text" placeholder="Pesquise seu Produto">
 
+            <% if(typeof user != "undefined"){%>
+                <h1>Bem vindo, <%= user.nome %></h1>
+                <%} else{   %>
 
             <button class="logo">
                 <img src="img/user-alt-solid.svg" alt="">
                 <a href="/users/login">Entre ou Registre-se</a>
             </button>
+            <%}  %>
             <a href="/users/pagamento"><img src="img/shopping-cart-solid.svg" alt=" Carrinho de Compras"
                     id="carrinho"></a>
-
         </section>
 
         <section class="s-header">

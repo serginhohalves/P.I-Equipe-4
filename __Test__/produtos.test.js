@@ -4,16 +4,16 @@ const app = require('../app')
 const seeder = require('../utils/seeder')
 
 describe('Produtos', () => {
-  
-  beforeEach( async () => {
+
+  beforeEach(async () => {
     await Produto.destroy({
-      where:{},
+      where: {},
     })
   })
 
   test('Deve adicionar muitos produtos no banco', async () => {
-    await seeder().then( data => {
-     expect(data).toBe('Todos os produtos foram adicionados com sucesso!')
+    await seeder().then(data => {
+      expect(data).toBe('Todos os produtos foram adicionados com sucesso!')
     })
   })
 
@@ -37,14 +37,14 @@ describe('Produtos', () => {
       estoque: 25,
     }
 
-    let {nome, descricao, valor, categoria, imagem_produto, estoque } = produto
+    let { nome, descricao, valor, categoria, imagem_produto, estoque } = produto
 
     request(app)
-    .post('/produtos/novo')
-    .send({nome, descricao, valor, categoria, imagem_produto, estoque})
-    .then(response => {
+      .post('/produtos/novo')
+      .send({ nome, descricao, valor, categoria, imagem_produto, estoque })
+      .then(response => {
         expect(response.statusCode).toBe(200)
         done()
-    })
+      })
   })
 })

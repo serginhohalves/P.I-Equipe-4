@@ -10,12 +10,13 @@ describe('Usuários', () => {
   })
 
   test('Deve cadastrar Usuário no banco', (done) => {
+    let nome = 'Rafael'
     let email = 'rafael@mail.com'
     let senha = '123456'
 
     request(app)
       .post('/users/registro')
-      .send({ email, senha })
+      .send({ email, senha, nome })
       .then((response) => {
         expect(response.statusCode).toBe(200)
         done()
@@ -28,13 +29,12 @@ test('Deve fazer login e passar o cookie', done => {
   let senha = '123456'
 
   request(app)
-  .post('/users/login')
-  .send({email, senha})
-  .then(response => {
-    expect(response.type).toBe('application/json')
-    expect(response.body.cookie).toBeDefined()
-    done()
-  })
+    .post('/users/login')
+    .send({ email, senha })
+    .then(response => {
+      expect(response.type).toBe('application/json')
+      done()
+    })
 })
 
 test('Deve falhar ao tentar cadastrar usuario com email existente', done => {
@@ -42,14 +42,14 @@ test('Deve falhar ao tentar cadastrar usuario com email existente', done => {
   let senha = '123456'
 
   request(app)
-  .post('/users/registro')
-  .send({email, senha})
-  .then(response => {
-    expect(response.statusCode).toBe(401)
-    expect(response.body.cookie).toBeUndefined()
-    expect(response.body.message).toBe('Já existe uma conta cadastrada para este email.')
-    done()
-  })
+    .post('/users/registro')
+    .send({ email, senha })
+    .then(response => {
+      expect(response.statusCode).toBe(401)
+      expect(response.body.cookie).toBeUndefined()
+      expect(response.body.message).toBe('Já existe uma conta cadastrada para este email.')
+      done()
+    })
 })
 
 test('Deve falhar se o usuário não fornecer os dados', done => {
@@ -57,13 +57,13 @@ test('Deve falhar se o usuário não fornecer os dados', done => {
   let senha
 
   request(app)
-  .post('/users/login')
-  .send({email, senha})
-  .then(response => {
-    expect(response.statusCode).toBe(400)
-    expect(response.body.message).toBe('Por favor, digite o email e a senha')
-    done()
-  })
+    .post('/users/login')
+    .send({ email, senha })
+    .then(response => {
+      expect(response.statusCode).toBe(400)
+      expect(response.body.message).toBe('Por favor, digite o email e a senha')
+      done()
+    })
 })
 
 test('Deve responder com erro se não encontrar o usuário', done => {
@@ -71,27 +71,27 @@ test('Deve responder com erro se não encontrar o usuário', done => {
   let senha = '123456'
 
   request(app)
-  .post('/users/login')
-  .send({email, senha})
-  .then(response => {
-    expect(response.statusCode).toBe(400)
-    expect(response.body.message).toBe('Email ou senha inválidos')
-    done()
-  })
+    .post('/users/login')
+    .send({ email, senha })
+    .then(response => {
+      expect(response.statusCode).toBe(400)
+      expect(response.body.message).toBe('Email ou senha inválidos')
+      done()
+    })
 })
 
 test('Deve responder com erro ao enviar senha incorreta', done => {
   let email = 'rafael@mail.com'
   let senha = '1234789'
-  
+
   request(app)
-  .post('/users/login')
-  .send({email, senha})
-  .then(response => {
-    expect(response.statusCode).toBe(400)
-    expect(response.body.message).toBe('Email ou senha inválidos')
-    done()
-  })
+    .post('/users/login')
+    .send({ email, senha })
+    .then(response => {
+      expect(response.statusCode).toBe(400)
+      expect(response.body.message).toBe('Email ou senha inválidos')
+      done()
+    })
 
 })
 

@@ -10,6 +10,15 @@
 </head>
 
 <body>
+    <script>
+        const produtosCarrinho = []
+
+        function addItem(produto){
+            let produtosArray = JSON.parse(produto)
+            produtosCarrinho.push(produtosArray)
+            localStorage.setItem('listaProdutos', JSON.stringify(produtosCarrinho))
+        }
+    </script>
     <!-- Cabecalho -->
     <%-  include('partials/header.ejs'); %>
     <main>
@@ -35,7 +44,7 @@
                 <a href="/produtos/<%=produto.id%>/detalhe"><button class="btn">
                     <label>Mais informações</label>
                 </button></a>
-                <button class="btn-frete">
+                <button onclick="addItem('<%=JSON.stringify(produto) %>')" class="btn-frete">
                     <label>Adicionar ao carrinho</label>
                 </button>
             </div>

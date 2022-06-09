@@ -11,6 +11,16 @@
 </head>
 
 <body>
+    <script>
+        function getItensFromStorage(){
+           let listaDeProdutos = localStorage.getItem('listaProdutos')
+           let array = JSON.parse(listaDeProdutos)
+           return array
+        }
+
+       getItensFromStorage()
+    
+    </script>
     <%-  include('partials/header.ejs'); %>
         <nav class="container">
             <section class="p-header">

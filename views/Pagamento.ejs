@@ -17,6 +17,14 @@
            let array = JSON.parse(listaDeProdutos)
            return array
         }
+
+        function deleteItem(id){
+            let itens = getItensFromStorage()
+            const novoArray = itens.filter(item => {
+               return item.id !== id
+            })
+            localStorage.setItem('listaProdutos', JSON.stringify(novoArray))   
+        }
     
         function createElements(){
             let listaDeProdutos = getItensFromStorage()
@@ -29,11 +37,12 @@
             <img src=${listaDeProdutos[i].imagem_produto}>            
             <p>${listaDeProdutos[i].categoria}</p>
             <p> R$${listaDeProdutos[i].valor},00</p>
+            <button class="btn-deletar" onclick=deleteItem(${listaDeProdutos[i].id})>Deletar produto </button>
             <div>`
             li.innerHTML += externalHTML
            } 
         }
-
+       
     </script>
     <%-  include('partials/header.ejs'); %>  
     <main>

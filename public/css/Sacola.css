@@ -289,3 +289,14 @@ p.g {
     font-size       : 16px;
     cursor          : pointer;
 }
+
+.btn-deletar {
+    background-color: #ff0000;
+    color           : #fff;
+    border          : 0;
+    border-radius   : 10px;
+    box-shadow      : 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding         : 14px 40px;
+    font-size       : 16px;
+    cursor          : pointer;
+}
